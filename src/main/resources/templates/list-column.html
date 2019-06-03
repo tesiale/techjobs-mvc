@@ -11,7 +11,6 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <div th:if="${items} and ${items.size()}">
-
         <table>
             <tr th:each="item, idx : ${items}" th:class="${idx.odd} ? 'odd'">
                 <td><a th:href="@{/list/jobs(column=${column},value=${item})}" th:text="${item}"></a></td>
